@@ -1,0 +1,134 @@
+body {
+    background-color: rgb(24, 24, 24);
+    margin: 0;
+    padding: 0;
+    font-size: 20vmin;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.scrollBar {
+    height: 1000vh;
+    width: 1%;
+    position: absolute;
+    opacity: 0;
+}
+
+.title {
+    font-size: 22vmin;
+    position: fixed;
+    margin: auto;
+    height: fit-content;
+    width: 100%;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+    background: rgb(124,104,255);
+    background: linear-gradient(9deg, rgba(124,104,255,1) 18%, rgba(125,114,255,1) 39%, rgba(86,135,255,1) 56%, rgba(61,166,255,1) 70%, rgba(135,199,255,1) 89%, rgba(185,218,255,1) 99%);
+    color: transparent;
+    background-clip: text;
+}
+
+.subTitle {
+    font-size: 10vmin;
+    position: fixed;
+    margin-left: 30%;
+    width: 50%;
+    top: calc(12vh + 40%);
+    color: rgb(172, 172, 172)
+}
+
+a {
+    color:rgb(172, 172, 172);
+    text-decoration: none;
+}
+
+.scrollTip {
+    position: fixed;
+    display: flex;
+    bottom: 0%;
+    vertical-align: text-bottom;
+    line-height: 10vh;
+    justify-content: center;
+    width: 100%;
+    font-size: 3vh;
+    transition: opacity 1s ease-out;
+}
+
+@keyframes sAnimation {
+    0% {
+        line-height: 0vh;
+    }
+    30%,
+    50% {
+        line-height: 10vh;
+    }
+    100%{
+        line-height: 30vh;
+    }
+}
+#s {
+    text-align: center;
+    height: 10vh;
+    width: 2vh;
+    animation:infinite 1s sAnimation;
+    overflow: hidden;
+    line-height: 0;
+    
+}
+
+/* Animation Page*/
+.animationsPage {
+    position: fixed;
+    margin-top: 100vh;
+    display: flex;
+    height: 140vh;
+    width: 100vw;
+    background: linear-gradient(135deg, rgba(124,104,255,1) 18%, rgba(125,114,255,1) 49%, rgba(86,135,255,1) 56%, rgba(61,166,255,1) 70%, rgba(135,199,255,1) 89%, rgba(185,218,255,1) 99%);
+    flex-direction: column;
+    border-radius: 10px;;
+
+}
+.slideshowTop,
+.slideshowMid,
+.slideshowBot {
+    font-size: 16pt;
+    height: 25vh;
+    width: 50vw;
+    background-color: rgb(59, 59, 59);
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border-radius: 0px 2px 2px 0px;
+    transition: width 3s ease-out;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    justify-content: space-around
+}
+
+.slideshowMid {
+    border-radius: 2px 0px 0px 2px;
+    margin-left: auto;
+}
+
+
+.slideshowItem {
+    position: relative;
+    height: 85%;
+    border: 1px solid silver;
+    margin: auto;
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 0; 
+    transition: transform 5s;
+}
+
+.pusher {
+    height: 450vh;
+    width: 100%;
+
+}
+
+.folder {
+
+}
