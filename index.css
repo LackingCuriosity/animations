@@ -16,7 +16,7 @@ body {
 
 .title {
     font-size: 22vmin;
-    position: fixed;
+    position: absolute;
     margin: auto;
     height: fit-content;
     width: 100%;
@@ -31,7 +31,7 @@ body {
 
 .subTitle {
     font-size: 10vmin;
-    position: fixed;
+    position: absolute;
     margin-left: 30%;
     width: 50%;
     top: calc(12vh + 40%);
@@ -44,7 +44,7 @@ a {
 }
 
 .scrollTip {
-    position: fixed;
+    position: absolute;
     display: flex;
     bottom: 0%;
     vertical-align: text-bottom;
@@ -81,7 +81,7 @@ a {
 
 @keyframes slide {
     0% {
-        transform: translateX(calc(410px * -5));
+        transform: translateX(calc(420px * -5));
     }
     100% {
         transform: translateX(0);
@@ -103,7 +103,7 @@ a {
 .slideshowBot {
     font-size: 16pt;
     height: 25vh;
-    width: 50vw;
+    width: calc(410 * 5 * 2px);
     background-color: rgb(59, 59, 59);
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -112,7 +112,7 @@ a {
     display: flex;
     white-space: nowrap;
     overflow: hidden;
-    justify-content: space-around
+
 }
 
 .slideshowMid {
@@ -137,10 +137,26 @@ a {
     flex-basis: 400px;
     flex-grow: 0;
     flex-shrink: 0; 
+    font-size: 32pt;
+    color: white;
+    text-align: center;
+    line-height: calc(.85 * 25vh);
+}
+
+.slideshowItem:hover {
+    cursor: pointer;
+}
+
+.animationLink {
+    width: 100vh;
+    height: 100%;
+    color: white;
+    background-color: red;
 }
 
 .slideshowItemSet,
 .slideshowItemSetCopy {
+
     flex-basis: calc(420px * 5);
     flex-grow: 0;
     flex-shrink: 0;
