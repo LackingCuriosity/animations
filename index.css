@@ -78,6 +78,15 @@ a {
 }
 
 /* Animation Page*/
+
+@keyframes slide {
+    0% {
+        transform: translateX(calc(410px * -5));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 .animationsPage {
     position: fixed;
     margin-top: 100vh;
@@ -86,7 +95,7 @@ a {
     width: 100vw;
     background: linear-gradient(135deg, rgba(124,104,255,1) 18%, rgba(125,114,255,1) 49%, rgba(86,135,255,1) 56%, rgba(61,166,255,1) 70%, rgba(135,199,255,1) 89%, rgba(185,218,255,1) 99%);
     flex-direction: column;
-    border-radius: 10px;;
+    border-radius: 10px;
 
 }
 .slideshowTop,
@@ -109,6 +118,13 @@ a {
 .slideshowMid {
     border-radius: 2px 0px 0px 2px;
     margin-left: auto;
+    animation:infinite reverse linear slide 20s;
+
+}
+
+.slideshowTop,
+.slideshowBot {
+    animation:infinite linear slide 20s;
 }
 
 
@@ -117,10 +133,19 @@ a {
     height: 85%;
     border: 1px solid silver;
     margin: auto;
-    flex-basis: 300px;
+    margin-left: 10px;
+    flex-basis: 400px;
     flex-grow: 0;
     flex-shrink: 0; 
-    transition: transform 5s;
+}
+
+.slideshowItemSet,
+.slideshowItemSetCopy {
+    flex-basis: calc(420px * 5);
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    overflow: hidden;
 }
 
 .pusher {
